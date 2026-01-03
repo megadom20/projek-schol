@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Harvard Solutions SRL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0f1a24; /* mély sötétkék a logóhoz */
+            color: #f5f7fa;
+        }
+        header {
+            background-color: #2a3441;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-placeholder {
+            width: 180px;
+            height: 80px;
+            border: 2px dashed #9aa4b2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9aa4b2;
+            font-size: 14px;
+        }
+        nav a {
+            color: #f2f2f2;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #4da3ff;
+        }
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #cfd6df;
+        }
+        .section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background-color: #2a3441;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #4da3ff;
+        }
+        .contact {
+            background-color: #2a3441;
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        footer {
+            background-color: #1a2129;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #9aa4b2;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-placeholder" style="border:none;">
+       <img src="./content.png" alt="Harvard Solutions SRL logo" style="max-width: 100%;max-height: 100%;">
+    </div>
+    <nav>
+        <a href="#home">Főoldal</a>
+        <a href="#services">Szolgáltatások</a>
+        <a href="#contact">Kapcsolat</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Harvard Solutions SRL</h1>
+    <p>
+        Számítógépek és számítógép-alkatrészek értékesítésével foglalkozó cég.
+        Minőségi termékek, megbízható megoldások és szakértői támogatás egy helyen.
+    </p>
+</section>
+
+<section class="section" id="services">
+    <h2>Szolgáltatásaink</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Számítógépek értékesítése</h3>
+            <p>Irodai, gamer és egyedi konfigurációk igény szerint.</p>
+        </div>
+        <div class="card">
+            <h3>Alkatrészek</h3>
+            <p>Processzorok, videokártyák, memóriák, tápegységek és egyéb alkatrészek.</p>
+        </div>
+        <div class="card">
+            <h3>Szerviz és tanácsadás</h3>
+            <p>Összeszerelés, karbantartás és szakértői segítség.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <h2>Elérhetőségek</h2>
+    <div class="contact">
+        <p><strong>Cégnév:</strong> Harvard Solutions SRL</p>
+        <p><strong>Email:</strong> microsoftwindows775@gmail.com</p>
+        <p><strong>Telefonszám:</strong> 0772 085 099</p>
+        <p><strong>Cím:</strong> Bukarest, Str. Sinaia Nr. 11</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Harvard Solutions SRL – Minden jog fenntartva
+</footer>
+
+</body>
+</html>
