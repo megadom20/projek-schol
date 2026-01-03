@@ -15,19 +15,17 @@
 
         header {
             background: linear-gradient(90deg, #1b2b3a, #0f1a24);
-            padding: 25px 40px;
+            padding: 20px 30px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             border-bottom: 2px solid #b11226;
+            position: relative;
         }
 
         .logo-placeholder {
-            width: 320px;
-            height: 140px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 260px;
+            height: 120px;
         }
 
         .logo-placeholder img {
@@ -36,12 +34,16 @@
             object-fit: contain;
         }
 
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
         nav a {
             color: #f5f7fa;
             text-decoration: none;
             margin-left: 20px;
             font-weight: bold;
-            letter-spacing: 0.5px;
         }
 
         nav a:hover {
@@ -58,6 +60,39 @@
         .btn:hover {
             background-color: #e31c3d;
             color: #fff;
+        }
+
+        /* ===== MOBIL MENÜ ===== */
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                position: absolute;
+                top: 90px;
+                right: 20px;
+                background-color: #1b2b3a;
+                flex-direction: column;
+                border-radius: 12px;
+                padding: 15px 25px;
+                box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+            }
+
+            nav a {
+                margin: 12px 0;
+            }
+
+            nav.show {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
         }
 
         .hero {
@@ -117,11 +152,6 @@
             border-left: 4px solid #b11226;
         }
 
-        .contact p {
-            font-size: 16px;
-            margin: 10px 0;
-        }
-
         footer {
             background-color: #0b141d;
             text-align: center;
@@ -140,7 +170,9 @@
         <img src="content.png" alt="Harvard Solutions SRL logo">
     </div>
 
-    <nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav id="menu">
         <a href="#home">Főoldal</a>
         <a href="#services">Szolgáltatások</a>
         <a href="arlista.html" class="btn">Árlista</a>
@@ -151,35 +183,31 @@
 <section class="hero" id="home">
     <h1>Harvard Solutions SRL</h1>
     <p>
-        Számítógépek és számítógép-alkatrészek értékesítésével,
-        karbantartásával és egyedi PC-k építésével foglalkozó cég.
+        Számítógépek, alkatrészek, karbantartás és egyedi PC építés
+        professzionális szinten.
     </p>
 </section>
 
 <section class="section" id="services">
     <h2>Szolgáltatásaink</h2>
-
     <div class="services">
         <div class="card">
             <h3>Számítógépek</h3>
             <p>Irodai, gamer és egyedi konfigurációk.</p>
         </div>
-
         <div class="card">
             <h3>Alkatrészek</h3>
-            <p>CPU, GPU, RAM, SSD, tápegységek és kiegészítők.</p>
+            <p>CPU, GPU, RAM, SSD, tápegységek.</p>
         </div>
-
         <div class="card">
             <h3>Szerviz</h3>
-            <p>Karbantartás, telepítés, aktiválás és tanácsadás.</p>
+            <p>Karbantartás, telepítés, aktiválás.</p>
         </div>
     </div>
 </section>
 
 <section class="section" id="contact">
     <h2>Elérhetőségek</h2>
-
     <div class="contact">
         <p><strong>Cégnév:</strong> Harvard Solutions SRL</p>
         <p><strong>Email:</strong> microsoftwindows775@gmail.com</p>
@@ -191,6 +219,12 @@
 <footer>
     © 2026 Harvard Solutions SRL – Minden jog fenntartva
 </footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
